@@ -45,13 +45,13 @@
     grid-template-rows: repeat(6, 1fr);
 }
 
-.nav-selection, .help-selection {
+.logo, .nav-selection, .help-selection {
     border: 1px solid black;
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
 
-.nav-selection > *, .help-selection > * {
+.nav-selection > *, .help-selection > *, .logo > *{
     border: 1px solid black;
 }
 
