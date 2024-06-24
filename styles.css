@@ -1,7 +1,14 @@
+:root {
+    --accent-color: #991b1b;
+    --secondary-color: #a3a3a3;
+    --lighter-text: #737373;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 .main-container {
@@ -87,6 +94,40 @@
 .project, .announcement, .trending {
     border: 1px solid black;
     background-color: white;
+}
+
+.project {
+    display: grid;
+    border-radius: 10px;
+    border-left: 10px solid var(--accent-color);
+}
+
+.project-title, .project-description {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.project-title {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: end;
+    padding-bottom: 5px;
+}
+
+.project-description {
+    font-size: 16px;
+    color: var(--lighter-text);
+}
+
+.project > .reactions {
+    justify-content: end;
+    margin-right: 15px;
+}
+
+.reactions {
+    display: grid;
+    grid-template-columns: repeat(3, 45px);
 }
 
 .right-section {
