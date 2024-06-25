@@ -1,5 +1,6 @@
 :root {
     --accent-color: #991b1b;
+    --accent-color-two: #0284c7;
     --secondary-color: #a3a3a3;
     --lighter-text: #737373;
     --light-background: #cbd5e1;
@@ -12,6 +13,9 @@
     font-family: "Roboto", sans-serif;
 }
 
+html {
+    background-color: var(--light-background);
+}
 .main-container {
     width: 100vw;
     height: 100vh;
@@ -22,15 +26,125 @@
 }
 
 .header {
-    border: 2px solid black;
     grid-column: 2/3;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    box-shadow:  0 4px 2px -2px var(--secondary-color);
+    margin-bottom: 2px;
+}
+
+.account {
+    display: flex;
+    justify-content: end;
+    padding-right: 10%;
+}
+
+.noti-icon, .account-icon, .account-name {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.noti-icon {
+    justify-content: end;
+}
+
+.account-icon {
+    justify-content: center;
+    width: 75px;
+}
+
+.account-name {
+    justify-content: start;
+    font-weight: bold;
+}
+
+.noti-icon > svg {
+    width: 25px;
+    height: 25px;
+}
+
+.account-icon > img {
+    width: 50px;
+    height: 50px;
+}
+
+.profile-display {
+    display: grid;
+    grid-template-columns: 125px 300px;
+    grid-template-rows: 60px 60px;
+    padding-left: 50px;
+}
+
+.profile-icon {
+    grid-row: 1/3;
+    display: flex;
+    padding: 10px;
+}
+
+.profile-icon > img {
+    height: 100px;
+    width: 100px;
+}
+
+.profile-name {
+    grid-column: 2/3;
+    font-size: 24px;
+    font-weight: bold;
+} 
+.profile-greeting {
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
 }
 
 .searchbar, .account, .profile-display, .button-section {
     background-color: white;
-    border: 1px solid black;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 50px;
+}
+
+.searchbar > svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+input {
+    background-color: var(--light-background);
+    width: 80%;
+    height: 30px;
+    border-radius: 40px;
+    border: 1px solid var(--light-background);
+    padding-left: 10px;
+}
+
+
+.button-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+}
+
+button {
+    width: 25%;
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--accent-color-two);
+    color: white;
+    border: 1px solid var(--accent-color-two);
+}
+button:hover {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
 }
 
 .sidebar {
@@ -39,12 +153,12 @@
     grid-template-rows: .5fr 3fr 1.5fr;
     row-gap: 50px;
     padding-bottom: 500px;
-    background-color: gray;
-    padding-left: 15%;
+    background-color: var(--accent-color-two);
+    padding-left: 20px;
 }
 
 .logo, .navigation, .help {
-    background-color: gray;
+    background-color: var(--accent-color-two);
 }
 
 .navigation {
